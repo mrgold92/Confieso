@@ -1,72 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confieso</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-
-<body>
-    <div class="all">
-        <div class="menu">
-            <ul>
-                <li>
-                    <a href="#">
-                        <div class="menu__item">
-                            <img src="img/icons8_pencil_30px.png" alt="" />
-                            <div class="menu__text">
-                                Escribir
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="menu__item">
-                            <img src="img/icons8_eye_30px.png" alt="">
-                            <div class="menu__text">
-                                Ver
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+  <body>
+    <div class="fondo-modal">
+      <div class="modal-a">
+        <div class="modal_cerrar">
+          <span>x</span>
         </div>
+        <div class="modal_titulo">NUEVO SECRETO</div>
+        <div class="modal_mensaje">
+          <form action="">
+            <label for="fname">Nombre</label>
+            <input type="text" id="fname" name="firstname" />
 
-        <div class="content">
-            <div class="card">
-                <div class="card__img">
-                    <img src="img/default-user-img.jpg" alt="">
-                </div>
-                <div class="card__body">
-                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nihil distinctio fuga, aperiam
-                        iure suscipit esse voluptate blanditiis in voluptates nemo modi sit cupiditate maiores
-                        molestias. Odio quae optio veritatis.Reiciendis eius minus labore officia officiis voluptatem
-                        dolores ullam rerum, corrupti esse? Sint impedit nostrum autem sunt? Non quo cupiditate
-                        architecto nulla. Explicabo sequi officiis labore dicta suscipit sunt corporis.</span>
-                        <div class="card__bottom">
-                            <span>12/10/2020 15:30 - Guille</span>
-                        </div>
-                </div>
-               
-            </div>
-            <div class="card">
-                <div class="card__img">
-                    <img src="img/default-user-img.jpg" alt="">
-                </div>
-                <div class="card__body">
-                    <span>Lorem, ipsum dolor sit amet.</span>
-                    <div class="card__bottom">
-                        <span>12/10/2020 15:30 - Anónimo</span>
-                    </div>
-                </div>
-                
-            </div>
+            <label for="lname">Secreto</label>
+            <input type="text" id="lname" name="lastname" />
+          </form>
         </div>
+        <div class="modal_botones">
+          <a href="" class="boton">CONTAR</a>
+        </div>
+      </div>
     </div>
-</body>
 
+    <div class="all">
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#" id="new">
+              <div class="menu__item">
+                <img src="img/icons8_pencil_30px.png" alt="" />
+                <div class="menu__text">
+                  Escribir
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="menu__item">
+                <img src="img/icons8_eye_30px.png" alt="" />
+                <div class="menu__text">
+                  Ver
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="card">
+          <div class="card__img">
+            <img src="img/default-user-img.jpg" alt="" />
+          </div>
+          <div class="card__body">
+            <span>Confieso que me gustan las mujeres</span>
+            <div class="card__bottom">
+              <span>12/10/2020 15:30 - Guille</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img">
+            <img src="img/default-user-img.jpg" alt="" />
+          </div>
+          <div class="card__body">
+            <span>Confieso que hoy no he reído</span>
+            <div class="card__bottom">
+              <span>12/10/2020 15:30 - Anónimo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img">
+            <img src="img/default-user-img.jpg" alt="" />
+          </div>
+          <div class="card__body">
+            <span>Confieso que hoy no me he duchado</span>
+            <div class="card__bottom">
+              <span>12/10/2020 11:24 - Lorena</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("new").addEventListener("click", function () {
+        document.getElementsByClassName("fondo-modal")[0].style.display =
+          "block";
+        document.getElementsByClassName("all")[0].style.filter = "blur(5px)";
+        return false;
+      });
+      document
+        .getElementsByClassName("modal_cerrar")[0]
+        .addEventListener("click", function () {
+          document.getElementsByClassName("fondo-modal")[0].style.display =
+            "none";
+          document.getElementsByClassName("all")[0].style.filter = "blur(0)";
+        });
+    </script>
+  </body>
 </html>
