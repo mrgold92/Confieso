@@ -20,7 +20,12 @@
             <input type="text" id="fname" name="firstname" />
 
             <label for="lname">Secreto</label>
-            <input type="text" id="lname" name="lastname" />
+            <input
+              type="text"
+              id="secreto"
+              name="secreto"
+              value="Confieso que..."
+            />
           </form>
         </div>
         <div class="modal_botones">
@@ -95,20 +100,6 @@
       </div>
     </div>
 
-    <script>
-      document.getElementById("new").addEventListener("click", function () {
-        document.getElementsByClassName("fondo-modal")[0].style.display =
-          "block";
-        document.getElementsByClassName("all")[0].style.filter = "blur(5px)";
-        return false;
-      });
-      document
-        .getElementsByClassName("modal_cerrar")[0]
-        .addEventListener("click", function () {
-          document.getElementsByClassName("fondo-modal")[0].style.display =
-            "none";
-          document.getElementsByClassName("all")[0].style.filter = "blur(0)";
-        });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

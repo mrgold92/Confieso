@@ -135,7 +135,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -166,7 +165,7 @@ body {
   text-align: center;
 }
 .modal_mensaje {
-  padding: 10px 30px;
+  padding: 5px 30px;
   color: #15202b;
 
 }
@@ -193,10 +192,6 @@ body {
 }
 
 /* INPUT */
-
-.modal_mensaje{
-    padding-top:40px;
-}
 
 
 input[type="text"] {
