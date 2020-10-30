@@ -1,0 +1,149 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+body {
+    background-color: #15202B;
+    color: #FFFF;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.all {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+
+}
+
+
+.all .menu {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.all .menu ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+.all .menu ul li a .menu__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    font-weight: 600;
+
+}
+
+.all .menu ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.all .menu ul li a img {
+
+    margin-right: 10px;
+
+}
+
+.all .menu ul li:hover {
+    background-color: #f45d222f;
+    border-radius: 50px;
+}
+
+.all .menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTENT */
+
+
+.all .content {
+    border: 1px solid rgba(128, 128, 128, 0.52);
+    width: 90%;
+    padding: 8px 0;
+}
+
+.all .content .card:not(:nth-child(1)) {
+    border-top: none;
+}
+
+.all .content .card {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid rgba(128, 128, 128, 0.52);
+    border-right: none;
+    border-left: none;
+    cursor: pointer;
+    min-height: 10px;
+    padding: 8px 10px;
+
+}
+
+.all .content .card:hover {
+    background-color: rgba(128, 128, 128, 0.123);
+
+}
+
+.all .content img {
+    margin-right: 30px;
+    width: 45px;
+    border-radius: 9999px;
+    margin-top: 2px;
+}
+
+
+
+.all .content .card .card__body {
+
+    padding: 10px 5px;
+
+}
+
+.all .content .card .card__bottom {
+    padding: 10px 0;
+
+}
+
+.all .content .card .card__bottom span {
+
+    font-size: 9pt;
+    font-style: italic;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:1024px) {
+
+    .menu__text {
+        display: none;
+    }
+
+
+    .all .menu ul li a img {
+
+        margin-right: 0;
+
+    }
+}
